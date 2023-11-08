@@ -2,9 +2,10 @@
 package dominio;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Matricula {
-    private List<AnoSemestre> anoSemestres;
+    private List<AnoSemestre> anoSemestres = new ArrayList<AnoSemestre>();
     private Aluno aluno;
     private Curso curso;
     private String matricula;

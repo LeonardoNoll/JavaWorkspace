@@ -38,12 +38,12 @@ public class NotaDisciplina {
 
     //*Setters
     protected void setAnoSemestre(AnoSemestre as) {
-        if (anoSemestre == null) throw new RuntimeException("Ano/semestre invalido");
+        if (as == null) throw new RuntimeException("Ano/semestre invalido");
         else this.anoSemestre = as; 
     }
 
     protected void setDisciplina(Disciplina d) {
-        if (disciplina == null) throw new RuntimeException("Disciplina invalida");
+        if (d == null) throw new RuntimeException("Disciplina invalida");
         else this.disciplina = d; 
     }
     

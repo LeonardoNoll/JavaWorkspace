@@ -2,11 +2,12 @@
 
 package dominio;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Aluno {
     private String cpf;
     private String nome;
-    private List<Matricula> matricula;
+    private List<Matricula> matricula = new ArrayList<Matricula>();
 
     //*Construtor */
     public Aluno(String c, String n){

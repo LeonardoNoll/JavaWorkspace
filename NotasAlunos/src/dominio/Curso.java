@@ -1,11 +1,12 @@
 //*ESTADO: COMPLETO */
 package dominio;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Curso {
     private String nome;
-    private List<Disciplina> disciplinas;
-    private List<Matricula> matriculas;
+    private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+    private List<Matricula> matriculas = new ArrayList<Matricula>();
 
     //*Construtor */
     public Curso(String n){

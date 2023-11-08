@@ -1,12 +1,13 @@
 //*ESTADO: PRONTO */
 package dominio;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnoSemestre {
     private int ano;
     private int semestre;
     private Matricula matricula; 
-    private List<NotaDisciplina> notas;
+    private List<NotaDisciplina> notas = new ArrayList<NotaDisciplina>();
 
     //*Construtor */
     protected AnoSemestre(int a, int sem, Matricula mat){
