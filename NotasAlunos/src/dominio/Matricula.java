@@ -68,7 +68,9 @@ public class Matricula {
 
     protected void setCurso(Curso c){
         if (c == null) throw new RuntimeException("Curso invalido");
-        else this.curso = c;
-        // this.curso.incluiMatricula(this);
+        else {
+            this.curso = c;
+            c.incluiMatricula(this); //Acho q faz sentido colocar aqui porque so eh chamado no instanciamento da matricula
+        }
     }
 }
