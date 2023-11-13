@@ -11,7 +11,7 @@ public class teste {
         Curso curso1 = new Curso("Sistemas Para a Internet");
         Matricula matricula1 = new Matricula("001", 2021, 1, aluno1, curso1); //4) Efetuar a Matricula de um Aluno em um Curso.
         matricula1.registraAnoSemestre(2021, 1); //5) Criar um registro de AnoSemestre para um Aluno
-        Situacao situacao1 = new Situacao("Aprovado");
+        Situacao situacao1 = new Situacao("APROVADO");
         matricula1.listAnoSemestre().get(0).registraNotaDisciplina(10, disciplina1, situacao1); //6) Registrar que um Aluno fez uma Disciplina em um determinado AnoSemestre e que tirou determinada nota com tal Situacao (Aprovado, Reprovado Por Nota, Reprovado por Frequencia...)
         
         
