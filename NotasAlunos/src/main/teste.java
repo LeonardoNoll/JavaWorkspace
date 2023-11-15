@@ -19,10 +19,6 @@ public class teste {
         //Cadastrar Disciplina
         Disciplina disciplina2 = new Disciplina("002", "Matemática", 60);
         Disciplina disciplina3 = new Disciplina("003", "Português", 60);
-
-        System.out.println(disciplina1.getCodigo()); 
-        System.out.println(disciplina2.getCodigo()); 
-        System.out.println(disciplina3.getCodigo());
         
         //3) Incluir Disciplina em Curso.
         curso1.incluiDisciplina(disciplina1);
@@ -37,30 +33,15 @@ public class teste {
 
         //7) Gerar o histórico referente a uma Matricula de um Aluno (nome do aluno, numero de matricula, disciplinas cursadas: codigo da disciplina, ano, semestre, nota e situação.
         System.out.println("==================================================");
-        System.out.println("Aluno: " + matricula1.getAluno().getNome());
-        System.out.println("Numero de matricula: " + matricula1.getMatricula());
-        for(int i = 0; i < matricula1.listAnoSemestre().size(); i++){
-            AnoSemestre anoSemestreAtual = matricula1.listAnoSemestre().get(i);
-            System.out.println("DISCIPLINAS CURSADAS NO SEMESTRE " + anoSemestreAtual.getAno() + "/" + anoSemestreAtual.getSemestre());
-            for(int j = 0; j < anoSemestreAtual.listNotaDisciplina().size(); j++){
-                NotaDisciplina notaDisciplinaAtual = anoSemestreAtual.listNotaDisciplina().get(j);
-                System.out.println(notaDisciplinaAtual.getDisciplina().getNome() +" - "+ notaDisciplinaAtual.getDisciplina().getCodigo() + ": Nota " + notaDisciplinaAtual.getNota() + " " + notaDisciplinaAtual.getSituacao().getSituacao());
-            }
-        }
+        utils.historico(matricula1);
         System.out.println("==================================================");
         
         //8) Listar todas as Disciplinas de um determinado Curso.
-        System.out.println("Disciplinas do curso 1");
-        for (int i = 0; i < curso1.getDisciplinas().size(); i++){
-            System.out.println(curso1.getDisciplinas().get(i).getNome());
-        }
+        utils.disciplinasCurso(curso1);
         System.out.println("==================================================");
 
         //9) Mostrar as Disciplinas que faltam para um Aluno cursar em um determinado Curso.
-        System.out.println("Quais disciplinas faltam para o aluno");
-        Curso cursoAux = curso1;
-        Matricula matriculaAux = matricula1;
-        quaisDisciplinasFaltam(matricula1,curso1);
-
+		utils.printaDisciplinasPendentes(matricula1, curso1);
+        System.out.println("==================================================");
     }
 }
