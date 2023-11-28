@@ -1,0 +1,8 @@
+{
+  "java.project.sourcePaths": [
+    "NotasAlunos/src/main",
+    "NotasAlunos/src",
+    "NotasAlunos",
+    "NotasAlunos/src/dominio"
+  ]
+}
