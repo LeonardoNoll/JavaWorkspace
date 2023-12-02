@@ -1,7 +1,6 @@
 package main;
 import java.util.ArrayList;
 import java.util.List;
-
 import dominio.*;
 
 public class utils {
@@ -40,7 +39,9 @@ public class utils {
                 NotaDisciplina notaDisciplinaAux = semestreAux.listNotaDisciplina().get(j);
                 if (notaDisciplinaAux.getSituacao().getSituacao() == "APROVADO") {
                     disciplinasAprovadas.add(notaDisciplinaAux.getDisciplina());
-                }  
+                    // System.out.println(notaDisciplinaAux.getDisciplina().getNome());
+                }
+                System.out.println(notaDisciplinaAux.getDisciplina().getNome());
             }      
         }
         //Povoa o array disciplinasQueFaltam
