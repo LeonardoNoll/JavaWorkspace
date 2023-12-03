@@ -32,7 +32,7 @@ public class utils {
         List<Disciplina> disciplinasAprovadas = new ArrayList<Disciplina>();
         List<Disciplina> disciplinasQueFaltam = new ArrayList<Disciplina>();
 
-        //Povoa o array
+        //Povoa o array disciplinasAprovadas
         for(int i = 0; i < m.listAnoSemestres().size(); i++){
             AnoSemestre semestreAux = m.listAnoSemestres().get(i);
             for(int j = 0; j < semestreAux.listNotaDisciplina().size(); j++){

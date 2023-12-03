@@ -43,10 +43,25 @@ public class Tela6 {
         System.out.println("Digite a nota do aluno: ");
         int nota = in.nextInt();
 
-        System.out.println("Digite a situacao do aluno (ex: APROVADO): ");
-        in.nextLine(); //Limpa o buffer
-        String situacaoString = in.nextLine();
-        Situacao situacao = new Situacao(situacaoString);
+        System.out.println("Digite o codigo para a situacao do aluno: ");
+        System.out.println("0 - APROVADO");
+        System.out.println("1 - REPROVADO POR NOTA");
+        System.out.println("2 - REPROVADO POR FREQUENCIA");
+        codigo = in.nextInt();
+        Situacao situacao;
+        switch (codigo) {
+            case 0:
+            situacao = new Situacao("APROVADO");
+            break;
+            case 1:
+            situacao = new Situacao("REPROVADO POR NOTA");
+            break;
+            case 2:
+            situacao = new Situacao("REPROVADO POR FREQUENCIA");
+            break;
+            default:
+            throw new RuntimeException("Situacao invalida");
+        }
 
         anoSemestre.registraNotaDisciplina(nota, disciplina, situacao);
     }

@@ -75,7 +75,7 @@ public class teste {
         System.out.println("\n==================================================");
         utils.historico(matricula001);
         System.out.println("==================================================\n");
-        
+
         //8) Listar todas as Disciplinas de um determinado Curso.
         System.out.println("\n==================================================");
         utils.disciplinasCurso(curso1);
@@ -102,8 +102,16 @@ public class teste {
         System.out.println("==================================================\n");
         
         //9) Mostrar as Disciplinas que faltam para um Aluno cursar em um determinado Curso.
+        //Para testar se a tela 6 está funcionando
+        //Exemplo: se na tela 6 cadastrarmos uma disciplina previamente incompleta
+        //com situacao "APROVADO", ela não deve aparecer na lista de disciplinas pendentes
         System.out.println("\n==================================================");
 		utils.printaDisciplinasPendentes(matricula001, curso1);
+        System.out.println("==================================================\n");
+
+        //7) Gerar o histórico referente a uma Matricula de um Aluno (nome do aluno, numero de matricula, disciplinas cursadas: codigo da disciplina, ano, semestre, nota e situação.
+        System.out.println("\n==================================================");
+        utils.historico(matricula001);
         System.out.println("==================================================\n");
     }
 }
