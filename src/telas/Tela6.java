@@ -41,7 +41,7 @@ public class Tela6 {
         Disciplina disciplina = matricula.getCurso().getDisciplinas().get(codigo);
         
         System.out.println("Digite a nota do aluno: ");
-        int nota = in.nextInt();
+        float nota = in.nextFloat();
 
         System.out.println("Digite o codigo para a situacao do aluno: ");
         System.out.println("0 - APROVADO");
